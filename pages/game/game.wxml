@@ -1,0 +1,31 @@
+<!--game.wxml-->
+<view class="container">
+  <view class="dark-texture"></view>
+  <view class="header flex-row space-between">
+    <view class="timer">
+      <view class="timer-text">{{timeLeft}}</view>
+      <view class="timer-bar">
+        <view class="timer-progress" style="width: {{timeProgress}}%"></view>
+      </view>
+    </view>
+    <view class="score">分数: {{score}}</view>
+  </view>
+  
+  <view class="word-container">
+    <view class="word">{{currentWord}}</view>
+    <view class="round-info">第 {{currentRound}}/{{totalRounds}} 轮</view>
+  </view>
+  
+  <view class="action-area">
+    <view class="correct-area" bindtap="markCorrect">
+      <view class="action-text">正确</view>
+    </view>
+    <view class="skip-area" bindtap="skipWord">
+      <view class="action-text">跳过</view>
+    </view>
+  </view>
+  
+  <view class="pause-btn" bindtap="togglePause">
+    <text class="{{isPaused ? 'icon-play' : 'icon-pause'}}"></text>
+  </view>
+</view> 

@@ -1,7 +1,28 @@
 <!--index.wxml-->
-<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
-<scroll-view class="scrollarea" scroll-y type="list">
-  <view class="container">
-    Weixin
+<navigation-bar title="疯狂猜词" back="{{false}}" color="white" background="transparent"></navigation-bar>
+<view class="container">
+  <view class="dark-texture"></view>
+  <view class="title">疯狂猜词</view>
+  
+  <view class="card-grid">
+    <view class="menu-card" bindtap="startGame">
+      <view class="card-icon-text">▶</view>
+      <view class="card-text">开始游戏</view>
+    </view>
+    
+    <view class="menu-card" bindtap="showRules">
+      <view class="card-icon-text">?</view>
+      <view class="card-text">游戏规则</view>
+    </view>
+    
+    <view class="menu-card" bindtap="showSettings">
+      <view class="card-icon-text">⚙</view>
+      <view class="card-text">设置</view>
+    </view>
+    
+    <view class="menu-card" bindtap="showRanking">
+      <view class="card-icon-text">🏆</view>
+      <view class="card-text">排行榜</view>
+    </view>
   </view>
-</scroll-view>
+</view>

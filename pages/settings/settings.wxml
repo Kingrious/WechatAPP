@@ -1,0 +1,35 @@
+<!--settings.wxml-->
+<navigation-bar title="游戏设置" back="{{true}}" color="white" background="transparent"></navigation-bar>
+<view class="container">
+  <view class="dark-texture"></view>
+  <view class="card">
+    <view class="subtitle">词库类别</view>
+    <view class="category-list">
+      <view class="category-item {{selectedCategory === 'daily' ? 'active' : ''}}" bindtap="selectCategory" data-category="daily">日常</view>
+      <view class="category-item {{selectedCategory === 'movie' ? 'active' : ''}}" bindtap="selectCategory" data-category="movie">电影</view>
+      <view class="category-item {{selectedCategory === 'celebrity' ? 'active' : ''}}" bindtap="selectCategory" data-category="celebrity">名人</view>
+      <view class="category-item {{selectedCategory === 'animal' ? 'active' : ''}}" bindtap="selectCategory" data-category="animal">动物</view>
+    </view>
+  </view>
+  
+  <view class="card">
+    <view class="subtitle">游戏时长</view>
+    <view class="time-list">
+      <view class="time-item {{gameDuration === 30 ? 'active' : ''}}" bindtap="selectDuration" data-duration="30">30秒</view>
+      <view class="time-item {{gameDuration === 60 ? 'active' : ''}}" bindtap="selectDuration" data-duration="60">60秒</view>
+      <view class="time-item {{gameDuration === 90 ? 'active' : ''}}" bindtap="selectDuration" data-duration="90">90秒</view>
+      <view class="time-item {{gameDuration === 120 ? 'active' : ''}}" bindtap="selectDuration" data-duration="120">120秒</view>
+    </view>
+  </view>
+  
+  <view class="card">
+    <view class="subtitle">回合数</view>
+    <view class="rounds-selector">
+      <view class="round-control" bindtap="decreaseRounds">-</view>
+      <view class="round-value">{{rounds}}</view>
+      <view class="round-control" bindtap="increaseRounds">+</view>
+    </view>
+  </view>
+  
+  <view class="btn" bindtap="startGame">开始游戏</view>
+</view> 

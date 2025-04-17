@@ -1,0 +1,127 @@
+/**result.wxss**/
+.container {
+  padding-top: 120rpx;
+  justify-content: flex-start;
+  background: linear-gradient(135deg, #0a1930 0%, #152b48 50%, #1e3c68 100%);
+}
+
+.dark-texture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px,
+    transparent 6px
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+.score-container {
+  margin-bottom: 60rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.final-score {
+  font-size: 120rpx;
+  font-weight: bold;
+  color: rgba(100, 180, 255, 0.9);
+  animation: scorePopup 1s ease;
+  text-shadow: 0 0 20rpx rgba(100, 180, 255, 0.6);
+}
+
+.score-label {
+  font-size: 32rpx;
+  color: white;
+}
+
+.result-summary {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  background-color: rgba(70, 90, 130, 0.4);
+  border-radius: 16rpx;
+  padding: 20rpx;
+  margin: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+  font-weight: bold;
+  color: rgba(100, 180, 255, 0.9);
+  margin-bottom: 20rpx;
+}
+
+.word-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+
+.word-item {
+  padding: 10rpx 20rpx;
+  margin: 10rpx;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+}
+
+.correct {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #9CFFA3;
+  border: 1px solid rgba(76, 175, 80, 0.5);
+}
+
+.skipped {
+  background-color: rgba(255, 152, 0, 0.2);
+  color: #FFD180;
+  border: 1px solid rgba(255, 152, 0, 0.5);
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40rpx;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.share-btn {
+  background-color: rgba(30, 136, 229, 0.6);
+  color: white;
+  border-radius: 50rpx;
+  padding: 20rpx 40rpx;
+  margin: 20rpx 0;
+  font-size: 32rpx;
+  text-align: center;
+  width: 80%;
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.3);
+  border: none;
+}
+
+@keyframes scorePopup {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+} 

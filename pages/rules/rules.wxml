@@ -1,0 +1,40 @@
+<!--rules.wxml-->
+<navigation-bar title="游戏规则" back="{{true}}" color="white" background="transparent"></navigation-bar>
+<view class="container">
+  <view class="dark-texture"></view>
+  <view class="rules-container">
+    <view class="rules-title">疯狂猜词 - 游戏规则</view>
+    
+    <view class="rule-item">
+      <view class="rule-number">1</view>
+      <view class="rule-content">一名玩家手持设备，屏幕上显示需要猜的词语</view>
+    </view>
+    
+    <view class="rule-item">
+      <view class="rule-number">2</view>
+      <view class="rule-content">持有者自己看不到词语，其他玩家通过肢体动作来描述该词语</view>
+    </view>
+    
+    <view class="rule-item">
+      <view class="rule-number">3</view>
+      <view class="rule-content">持有者根据描述进行猜测</view>
+    </view>
+    
+    <view class="rule-item">
+      <view class="rule-number">4</view>
+      <view class="rule-content">猜对后，持有者点击左半边区域表示正确</view>
+    </view>
+    
+    <view class="rule-item">
+      <view class="rule-number">5</view>
+      <view class="rule-content">若放弃，则点击右半边区域表示跳过</view>
+    </view>
+    
+    <view class="rule-item">
+      <view class="rule-number">6</view>
+      <view class="rule-content">每轮时间有限，规定时间内猜对越多，得分越高</view>
+    </view>
+  </view>
+  
+  <view class="btn" bindtap="goBack">返回</view>
+</view> 

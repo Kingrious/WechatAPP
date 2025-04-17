@@ -1,0 +1,31 @@
+<!--result.wxml-->
+<navigation-bar title="游戏结果" back="{{false}}" color="white" background="transparent"></navigation-bar>
+<view class="container">
+  <view class="dark-texture"></view>
+  <view class="score-container">
+    <view class="final-score">{{score}}</view>
+    <view class="score-label">最终得分</view>
+  </view>
+  
+  <view class="result-summary">
+    <view class="card">
+      <view class="subtitle">猜对词语 ({{correctWords.length}})</view>
+      <view class="word-list">
+        <view class="word-item correct" wx:for="{{correctWords}}" wx:key="index">{{item}}</view>
+      </view>
+    </view>
+    
+    <view class="card">
+      <view class="subtitle">跳过词语 ({{skippedWords.length}})</view>
+      <view class="word-list">
+        <view class="word-item skipped" wx:for="{{skippedWords}}" wx:key="index">{{item}}</view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="action-buttons">
+    <view class="btn" bindtap="playAgain">再来一局</view>
+    <view class="btn" bindtap="goHome">返回主页</view>
+    <button open-type="share" class="share-btn">分享成绩</button>
+  </view>
+</view> 
